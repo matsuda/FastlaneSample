@@ -92,3 +92,5 @@ iOSInjectionProject/
 # Bundle
 .bundle
 vendor/bundle
+
+.env.*
