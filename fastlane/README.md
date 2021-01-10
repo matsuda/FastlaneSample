@@ -16,6 +16,11 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## iOS
+### ios store
+```
+fastlane ios store
+```
+build & release for app store
 ### ios build
 ```
 fastlane ios build

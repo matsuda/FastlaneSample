@@ -16,6 +16,38 @@
 default_platform(:ios)
 
 platform :ios do
+  desc "build & release for app store"
+  lane :store do
+    team_id = ENV["TEAM_ID"]
+    bundle_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+    profile = "AppStore #{bundle_identifier}"
+
+    xcargs = {
+      DEVELOPMENT_TEAM: team_id,
+      CODE_SIGN_STYLE: "Manual",
+      CODE_SIGN_IDENTITY: "Apple Distribution",
+      PROVISIONING_PROFILE_SPECIFIER: profile,
+    }
+
+    gym(
+      clean: true,
+      xcargs: xcargs,
+      export_options: {
+        method: "app-store",
+        provisioningProfiles: {
+          bundle_identifier => profile
+        }
+      }
+    )
+
+    deliver(
+      force: true,
+      automatic_release: false,
+      run_precheck_before_submit: false,
+      precheck_include_in_app_purchases: false,
+    )
+  end
+
   desc "build & archive for adhoc"
   lane :build do
     team_id = ENV["TEAM_ID"]
