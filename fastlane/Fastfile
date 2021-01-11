@@ -18,7 +18,7 @@ default_platform(:ios)
 platform :ios do
   desc "build & release for app store"
   lane :store do
-    team_id = ENV["TEAM_ID"]
+    team_id = CredentialsManager::AppfileConfig.try_fetch_value(:team_id)
     bundle_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
     profile = "AppStore #{bundle_identifier}"
 
@@ -48,11 +48,11 @@ platform :ios do
     )
   end
 
-  desc "build & archive for adhoc"
-  lane :build do
-    team_id = ENV["TEAM_ID"]
-    profile = "Adhoc com.github bundle identifier"
+  desc "build & export for adhoc"
+  lane :beta do
+    team_id = CredentialsManager::AppfileConfig.try_fetch_value(:team_id)
     bundle_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+    profile = "Adhoc com.github bundle identifier"
 
     # update_project_team(
     #   teamid: team_id

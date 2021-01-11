@@ -21,11 +21,11 @@ or alternatively using `brew install fastlane`
 fastlane ios store
 ```
 build & release for app store
-### ios build
+### ios beta
 ```
-fastlane ios build
+fastlane ios beta
 ```
-build & archive for adhoc
+build & export for adhoc
 ### ios refresh_dsyms
 ```
 fastlane ios refresh_dsyms
