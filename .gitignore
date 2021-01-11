@@ -94,3 +94,6 @@ iOSInjectionProject/
 vendor/bundle
 
 .env.*
+
+# Firebase
+GoogleService-Info*

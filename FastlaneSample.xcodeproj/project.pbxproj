@@ -15,6 +15,7 @@
 		0E998E5025A1B32400366131 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E998E4E25A1B32400366131 /* LaunchScreen.storyboard */; };
 		0E998E5B25A1B32400366131 /* FastlaneSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998E5A25A1B32400366131 /* FastlaneSampleTests.swift */; };
 		0E998E6625A1B32400366131 /* FastlaneSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998E6525A1B32400366131 /* FastlaneSampleUITests.swift */; };
+		0EF6A53625AC35E20023AEA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EF6A53525AC35E20023AEA0 /* GoogleService-Info.plist */; };
 		BD9B4FF13F2065D9FC93A354 /* libPods-FastlaneSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A4CB420E4883E441175B1B /* libPods-FastlaneSampleTests.a */; };
 		DD60D50FA30371BFE2FE5467 /* libPods-FastlaneSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9E64923FF14F3F3268381 /* libPods-FastlaneSample.a */; };
 		E75DD8041825E212D3D9B565 /* libPods-FastlaneSample-FastlaneSampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7EDF2352F6857287D3DC36 /* libPods-FastlaneSample-FastlaneSampleUITests.a */; };
@@ -52,6 +53,7 @@
 		0E998E6125A1B32400366131 /* FastlaneSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastlaneSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E998E6525A1B32400366131 /* FastlaneSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastlaneSampleUITests.swift; sourceTree = "<group>"; };
 		0E998E6725A1B32400366131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EF6A53525AC35E20023AEA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FD07C3B2BAE2E9C2010AFB7 /* Pods-FastlaneSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastlaneSample.debug.xcconfig"; path = "Target Support Files/Pods-FastlaneSample/Pods-FastlaneSample.debug.xcconfig"; sourceTree = "<group>"; };
 		58AA2BB8DC07372F0558563B /* Pods-FastlaneSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastlaneSampleTests.release.xcconfig"; path = "Target Support Files/Pods-FastlaneSampleTests/Pods-FastlaneSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		62BB26D308644AB51B6C5C8C /* Pods-FastlaneSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastlaneSample.release.xcconfig"; path = "Target Support Files/Pods-FastlaneSample/Pods-FastlaneSample.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				0E998E4C25A1B32400366131 /* Assets.xcassets */,
 				0E998E4E25A1B32400366131 /* LaunchScreen.storyboard */,
 				0E998E5125A1B32400366131 /* Info.plist */,
+				0EF6A53525AC35E20023AEA0 /* GoogleService-Info.plist */,
 			);
 			path = FastlaneSample;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				0E998E3C25A1B32300366131 /* Sources */,
 				0E998E3D25A1B32300366131 /* Frameworks */,
 				0E998E3E25A1B32300366131 /* Resources */,
+				0EF6A54825AC371B0023AEA0 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -275,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E998E5025A1B32400366131 /* LaunchScreen.storyboard in Resources */,
+				0EF6A53625AC35E20023AEA0 /* GoogleService-Info.plist in Resources */,
 				0E998E4D25A1B32400366131 /* Assets.xcassets in Resources */,
 				0E998E4B25A1B32300366131 /* Main.storyboard in Resources */,
 			);
@@ -297,6 +302,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0EF6A54825AC371B0023AEA0 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		56AB9DE196FAE3D2B5E72F3B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
