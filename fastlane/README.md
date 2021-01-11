@@ -31,6 +31,11 @@ build & export for adhoc
 fastlane ios refresh_dsyms
 ```
 download and upload dSYM files
+### ios bump_version
+```
+fastlane ios bump_version
+```
+bump version
 
 ----
 
