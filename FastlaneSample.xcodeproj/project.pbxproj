@@ -15,6 +15,9 @@
 		0E998E5025A1B32400366131 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E998E4E25A1B32400366131 /* LaunchScreen.storyboard */; };
 		0E998E5B25A1B32400366131 /* FastlaneSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998E5A25A1B32400366131 /* FastlaneSampleTests.swift */; };
 		0E998E6625A1B32400366131 /* FastlaneSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998E6525A1B32400366131 /* FastlaneSampleUITests.swift */; };
+		BD9B4FF13F2065D9FC93A354 /* libPods-FastlaneSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A4CB420E4883E441175B1B /* libPods-FastlaneSampleTests.a */; };
+		DD60D50FA30371BFE2FE5467 /* libPods-FastlaneSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9E64923FF14F3F3268381 /* libPods-FastlaneSample.a */; };
+		E75DD8041825E212D3D9B565 /* libPods-FastlaneSample-FastlaneSampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7EDF2352F6857287D3DC36 /* libPods-FastlaneSample-FastlaneSampleUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,15 @@
 		0E998E6125A1B32400366131 /* FastlaneSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastlaneSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E998E6525A1B32400366131 /* FastlaneSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastlaneSampleUITests.swift; sourceTree = "<group>"; };
 		0E998E6725A1B32400366131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FD07C3B2BAE2E9C2010AFB7 /* Pods-FastlaneSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastlaneSample.debug.xcconfig"; path = "Target Support Files/Pods-FastlaneSample/Pods-FastlaneSample.debug.xcconfig"; sourceTree = "<group>"; };
+		58AA2BB8DC07372F0558563B /* Pods-FastlaneSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastlaneSampleTests.release.xcconfig"; path = "Target Support Files/Pods-FastlaneSampleTests/Pods-FastlaneSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		62BB26D308644AB51B6C5C8C /* Pods-FastlaneSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastlaneSample.release.xcconfig"; path = "Target Support Files/Pods-FastlaneSample/Pods-FastlaneSample.release.xcconfig"; sourceTree = "<group>"; };
+		657653CB3A0B07067713F245 /* Pods-FastlaneSample-FastlaneSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastlaneSample-FastlaneSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-FastlaneSample-FastlaneSampleUITests/Pods-FastlaneSample-FastlaneSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		82C2B811C8CCEE543BEDBED5 /* Pods-FastlaneSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastlaneSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-FastlaneSampleTests/Pods-FastlaneSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7F9E64923FF14F3F3268381 /* libPods-FastlaneSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastlaneSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8A4CB420E4883E441175B1B /* libPods-FastlaneSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastlaneSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB7EDF2352F6857287D3DC36 /* libPods-FastlaneSample-FastlaneSampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastlaneSample-FastlaneSampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC99D1CA51E085D40C81F0A2 /* Pods-FastlaneSample-FastlaneSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastlaneSample-FastlaneSampleUITests.release.xcconfig"; path = "Target Support Files/Pods-FastlaneSample-FastlaneSampleUITests/Pods-FastlaneSample-FastlaneSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD60D50FA30371BFE2FE5467 /* libPods-FastlaneSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9B4FF13F2065D9FC93A354 /* libPods-FastlaneSampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E75DD8041825E212D3D9B565 /* libPods-FastlaneSample-FastlaneSampleUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				0E998E5925A1B32400366131 /* FastlaneSampleTests */,
 				0E998E6425A1B32400366131 /* FastlaneSampleUITests */,
 				0E998E4125A1B32300366131 /* Products */,
+				A6A3E668F8F0EDC7AC72F309 /* Pods */,
+				CD14BE4364873D4544040DE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +145,29 @@
 			path = FastlaneSampleUITests;
 			sourceTree = "<group>";
 		};
+		A6A3E668F8F0EDC7AC72F309 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FD07C3B2BAE2E9C2010AFB7 /* Pods-FastlaneSample.debug.xcconfig */,
+				62BB26D308644AB51B6C5C8C /* Pods-FastlaneSample.release.xcconfig */,
+				657653CB3A0B07067713F245 /* Pods-FastlaneSample-FastlaneSampleUITests.debug.xcconfig */,
+				FC99D1CA51E085D40C81F0A2 /* Pods-FastlaneSample-FastlaneSampleUITests.release.xcconfig */,
+				82C2B811C8CCEE543BEDBED5 /* Pods-FastlaneSampleTests.debug.xcconfig */,
+				58AA2BB8DC07372F0558563B /* Pods-FastlaneSampleTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CD14BE4364873D4544040DE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7F9E64923FF14F3F3268381 /* libPods-FastlaneSample.a */,
+				DB7EDF2352F6857287D3DC36 /* libPods-FastlaneSample-FastlaneSampleUITests.a */,
+				D8A4CB420E4883E441175B1B /* libPods-FastlaneSampleTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E998E6A25A1B32400366131 /* Build configuration list for PBXNativeTarget "FastlaneSample" */;
 			buildPhases = (
+				BE01D906D90BA6A9D57EBC92 /* [CP] Check Pods Manifest.lock */,
 				0E998E3C25A1B32300366131 /* Sources */,
 				0E998E3D25A1B32300366131 /* Frameworks */,
 				0E998E3E25A1B32300366131 /* Resources */,
@@ -152,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E998E6D25A1B32400366131 /* Build configuration list for PBXNativeTarget "FastlaneSampleTests" */;
 			buildPhases = (
+				56AB9DE196FAE3D2B5E72F3B /* [CP] Check Pods Manifest.lock */,
 				0E998E5225A1B32400366131 /* Sources */,
 				0E998E5325A1B32400366131 /* Frameworks */,
 				0E998E5425A1B32400366131 /* Resources */,
@@ -170,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E998E7025A1B32400366131 /* Build configuration list for PBXNativeTarget "FastlaneSampleUITests" */;
 			buildPhases = (
+				E5473C0C7528BAE4BB81ED2A /* [CP] Check Pods Manifest.lock */,
 				0E998E5D25A1B32400366131 /* Sources */,
 				0E998E5E25A1B32400366131 /* Frameworks */,
 				0E998E5F25A1B32400366131 /* Resources */,
@@ -252,6 +295,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56AB9DE196FAE3D2B5E72F3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastlaneSampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE01D906D90BA6A9D57EBC92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastlaneSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5473C0C7528BAE4BB81ED2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastlaneSample-FastlaneSampleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E998E3C25A1B32300366131 /* Sources */ = {
@@ -433,10 +545,13 @@
 		};
 		0E998E6B25A1B32400366131 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FD07C3B2BAE2E9C2010AFB7 /* Pods-FastlaneSample.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = FastlaneSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -453,10 +568,13 @@
 		};
 		0E998E6C25A1B32400366131 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62BB26D308644AB51B6C5C8C /* Pods-FastlaneSample.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = FastlaneSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,6 +591,7 @@
 		};
 		0E998E6E25A1B32400366131 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82C2B811C8CCEE543BEDBED5 /* Pods-FastlaneSampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +613,7 @@
 		};
 		0E998E6F25A1B32400366131 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58AA2BB8DC07372F0558563B /* Pods-FastlaneSampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +635,7 @@
 		};
 		0E998E7125A1B32400366131 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 657653CB3A0B07067713F245 /* Pods-FastlaneSample-FastlaneSampleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +655,7 @@
 		};
 		0E998E7225A1B32400366131 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC99D1CA51E085D40C81F0A2 /* Pods-FastlaneSample-FastlaneSampleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
