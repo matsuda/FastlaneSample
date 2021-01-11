@@ -82,4 +82,15 @@ platform :ios do
       }
     )
   end
+
+  desc "download and upload dSYM files"
+  lane :refresh_dsyms do |options|
+    version = options[:version] || "latest"
+
+    download_dsyms(
+      version: version
+    )
+    upload_symbols_to_crashlytics
+    clean_build_artifacts
+  end
 end

@@ -26,6 +26,11 @@ build & release for app store
 fastlane ios build
 ```
 build & archive for adhoc
+### ios refresh_dsyms
+```
+fastlane ios refresh_dsyms
+```
+download and upload dSYM files
 
 ----
 
