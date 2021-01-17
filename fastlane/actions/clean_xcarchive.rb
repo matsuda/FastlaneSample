@@ -1,17 +1,51 @@
 module Fastlane
   module Actions
     module SharedValues
-      CLEAN_XCARCHIVE_CUSTOM_VALUE = :CLEAN_XCARCHIVE_CUSTOM_VALUE
     end
 
     class CleanXcarchiveAction < Action
       def self.run(params)
-        # fastlane will take care of reading in the parameter and fetching the environment variable:
-        UI.message "Parameter API Token: #{params[:api_token]}"
 
-        # sh "shellcommand ./path"
+        # if default
+        # e.g. :XCODEBUILD_ARCHIVE=>"/Users/xxx/Library/Developer/Xcode/Archives/2015-08-07/AppName 2015-08-07 14.49.12.xcarchive"
+        unless archive_path = params[:archive_path] || Actions.lane_context[SharedValues::XCODEBUILD_ARCHIVE]
+          UI.user_error!("The built archive is not specified or Please build with gym before")
+          return
+        end
 
-        # Actions.lane_context[SharedValues::CLEAN_XCARCHIVE_CUSTOM_VALUE] = "my_val"
+        unless ( !archive_path.nil? && File.directory?(archive_path) )
+          UI.user_error!("No such directory #{archive_path}")
+          return
+        end
+
+        begin
+          FileUtils.remove_dir(archive_path)
+          UI.success("Successfully remove #{archive_path}")
+        rescue => ex
+          UI.error(ex)
+          return
+        end
+
+        # e.g. /Users/xxx/Library/Developer/Xcode/Archives/2015-08-07
+        archive_dir = File.dirname(archive_path)
+        return unless is_default_archive_dir?(archive_dir)
+        return unless Dir.empty?(archive_dir)
+
+        begin
+          Dir.rmdir(archive_dir)
+          UI.success("Successfully remove #{archive_dir}")
+        rescue
+        end
+
+      end
+
+      def self.archive_root
+        File.expand_path("~/Library/Developer/Xcode/Archives/")
+      end
+
+      def self.is_default_archive_dir?(archive_dir)
+        re = Regexp.new("\^#{archive_root}\/\\d{4}-\\d{2}-\\d{2}\$")
+        re.match(archive_dir) != nil
       end
 
       #####################################################
@@ -19,41 +53,25 @@ module Fastlane
       #####################################################
 
       def self.description
-        "A short description with <= 80 characters of what this action does"
+        "Delete the archive created at build"
       end
 
       def self.details
-        # Optional:
-        # this is your chance to provide a more detailed description of this action
-        "You can use this action to do cool things..."
+        ""
       end
 
       def self.available_options
-        # Define all options your action supports.
-
-        # Below a few examples
         [
-          FastlaneCore::ConfigItem.new(key: :api_token,
-                                       env_name: "FL_CLEAN_XCARCHIVE_API_TOKEN", # The name of the environment variable
-                                       description: "API Token for CleanXcarchiveAction", # a short description of this parameter
-                                       verify_block: proc do |value|
-                                          UI.user_error!("No API token for CleanXcarchiveAction given, pass using `api_token: 'token'`") unless (value and not value.empty?)
-                                          # UI.user_error!("Couldn't find file at path '#{value}'") unless File.exist?(value)
-                                       end),
-          FastlaneCore::ConfigItem.new(key: :development,
-                                       env_name: "FL_CLEAN_XCARCHIVE_DEVELOPMENT",
-                                       description: "Create a development certificate instead of a distribution one",
-                                       is_string: false, # true: verifies the input is a string, false: every kind of value
-                                       default_value: false) # the default value if the user didn't provide one
+          FastlaneCore::ConfigItem.new(key: :archive_path,
+                                       env_name: "FL_CLEAN_XCARCHIVE_ARCHIVE_PATH",
+                                       description: "Archive path at build",
+                                       is_string: true,
+                                       optional: true)
         ]
       end
 
       def self.output
-        # Define the shared values you are going to provide
-        # Example
-        [
-          ['CLEAN_XCARCHIVE_CUSTOM_VALUE', 'A description of what this value contains']
-        ]
+        []
       end
 
       def self.return_value
@@ -61,20 +79,10 @@ module Fastlane
       end
 
       def self.authors
-        # So no one will ever forget your contribution to fastlane :) You are awesome btw!
-        ["Your GitHub/Twitter Name"]
+        ["matsuda"]
       end
 
       def self.is_supported?(platform)
-        # you can do things like
-        #
-        #  true
-        #
-        #  platform == :ios
-        #
-        #  [:ios, :mac].include?(platform)
-        #
-
         platform == :ios
       end
     end
