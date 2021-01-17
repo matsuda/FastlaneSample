@@ -1,0 +1,70 @@
+platform :ios do
+
+  desc "build & release for app store"
+  lane :store do
+    team_id = CredentialsManager::AppfileConfig.try_fetch_value(:team_id)
+    bundle_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+    profile = "AppStore #{bundle_identifier}"
+
+    xcargs = {
+      DEVELOPMENT_TEAM: team_id,
+      CODE_SIGN_STYLE: "Manual",
+      CODE_SIGN_IDENTITY: "Apple Distribution",
+      PROVISIONING_PROFILE_SPECIFIER: profile,
+    }
+
+    gym(
+      clean: true,
+      xcargs: xcargs,
+      export_options: {
+        method: "app-store",
+        provisioningProfiles: {
+          bundle_identifier => profile
+        }
+      }
+    )
+
+    deliver(
+      force: true,
+      automatic_release: false,
+      run_precheck_before_submit: false,
+      precheck_include_in_app_purchases: false,
+    )
+  end
+
+  desc "build & export for adhoc"
+  lane :beta do
+    team_id = CredentialsManager::AppfileConfig.try_fetch_value(:team_id)
+    bundle_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+    profile = "Adhoc com.github bundle identifier"
+
+    # update_project_team(
+    #   teamid: team_id
+    # )
+
+    # update_code_signing_settings(
+    #   team_id: team_id,
+    #   code_sign_identity: "Apple Distribution",
+    #   profile_name: profile,
+    # )
+
+    xcargs = {
+      DEVELOPMENT_TEAM: team_id,
+      CODE_SIGN_STYLE: "Manual",
+      CODE_SIGN_IDENTITY: "Apple Distribution",
+      PROVISIONING_PROFILE_SPECIFIER: profile,
+    }
+
+    gym(
+      clean: true,
+      xcargs: xcargs,
+      export_options: {
+        method: "ad-hoc",
+        provisioningProfiles: {
+          bundle_identifier => profile
+        }
+      }
+    )
+  end
+
+end
