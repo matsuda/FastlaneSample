@@ -3,7 +3,7 @@ module Fastlane
     module SharedValues
     end
 
-    class CleanXcarchiveAction < Action
+    class RemoveXcarchiveAction < Action
       def self.run(params)
 
         # if default
@@ -63,7 +63,7 @@ module Fastlane
       def self.available_options
         [
           FastlaneCore::ConfigItem.new(key: :archive_path,
-                                       env_name: "FL_CLEAN_XCARCHIVE_ARCHIVE_PATH",
+                                       env_name: "FL_REMOVE_XCARCHIVE_ARCHIVE_PATH",
                                        description: "Archive path at build",
                                        is_string: true,
                                        optional: true)
