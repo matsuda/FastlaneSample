@@ -66,4 +66,13 @@ platform :ios do
     )
   end
 
+  desc "bump version"
+  lane :try_bump_version do |options|
+    current_version = get_version_number
+    UI.message("Current version is '#{current_version}'")
+    increment_version_number_in_xcodeproj(
+      bump_type: 'minor'
+    )
+  end
+
 end

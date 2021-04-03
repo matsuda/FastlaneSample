@@ -36,6 +36,11 @@ download and upload dSYM files
 fastlane ios bump_version
 ```
 bump version
+### ios try_bump_version
+```
+fastlane ios try_bump_version
+```
+bump version
 
 ----
 
