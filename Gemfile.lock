@@ -133,6 +133,7 @@ GEM
       xcpretty (~> 0.3.0)
       xcpretty-travis-formatter (>= 0.0.3)
     fastlane-plugin-clean_xcarchive (0.1.0)
+    fastlane-plugin-versioning (0.4.4)
     ffi (1.14.2)
     fourflusher (2.3.1)
     fuzzy_match (2.0.4)
@@ -245,6 +246,7 @@ DEPENDENCIES
   dotenv
   fastlane
   fastlane-plugin-clean_xcarchive
+  fastlane-plugin-versioning
 
 BUNDLED WITH
    2.1.4
